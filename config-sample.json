@@ -1,0 +1,14 @@
+{
+	"browserSync": {
+		"proxy": "https://local.host",
+		"port": 3000,
+		"https": true,
+		"open": true
+	},
+	"theme": {
+		"title": "Good Bones",
+		"description": "Custom Wordpress theme",
+		"folder": "good-bones-build",
+		"script": "good_bones"
+	}
+}

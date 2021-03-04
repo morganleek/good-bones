@@ -1,0 +1,38 @@
+@import './components/variables';
+@import './components/reset';
+@import './components/colors';
+@import './components/type';
+@import './components/accessibility';
+@import './components/blocks';
+@import './components/layout';
+@import './components/body';
+@import './components/header';
+@import './components/article';
+@import './components/footer';
+
+// Plugins
+@import './plugins/wp-everything-image';
+@import './plugins/wpcf7';
+
+// npm
+// $hamburger-padding-x: 0;
+// $hamburger-padding-y: 0;
+// $hamburger-layer-height: 2px;
+// $hamburger-layer-width: 30px;
+// $hamburger-layer-spacing: 8px;
+// $hamburger-layer-border-radius: 0;
+// @import '../../node_modules/hamburgers/_sass/hamburgers/hamburgers';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @extend %type;
+  @extend %form;
+  @extend %wp-blocks;
+
+  // Plugins
+  @extend %wpcf7;
+  @extend %wp-everything-image !optional; 
+}

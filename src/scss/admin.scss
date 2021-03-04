@@ -1,0 +1,29 @@
+@import './components/variables';
+@import './components/reset';
+@import './components/colors';
+@import './components/type';
+@import './components/accessibility';
+@import './components/blocks';
+@import './components/layout';
+@import './components/body';
+@import './components/header';
+@import './components/article';
+@import './components/footer';
+
+// Plugins
+@import './plugins/wp-everything-image';
+@import './plugins/wpcf7';
+
+body {
+  @extend %type;
+  @extend %wp-blocks;
+
+	:root {
+		font-size: 10px;
+	}
+}
+
+.edit-post-visual-editor__post-title-wrapper {
+	border-bottom: 1px solid rgb( 118, 118, 118 );
+}
+

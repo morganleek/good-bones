@@ -1,0 +1,23 @@
+header {
+	padding: 10px var(--content-mobile-margin) 20px;
+	@media (min-width: 768px) { 
+		padding: 30px var(--content-tablet-margin) 40px;
+	}
+	@media (min-width: 992px) { 
+		padding: 40px var(--content-desktop-margin) 50px;
+	}
+	
+	// Navigation
+	nav {
+		ul {
+			list-style: none;
+			padding-left: 0;
+		}
+		& > ul {
+			display: flex;
+			li {
+				padding-right: 10px;
+			}
+		}
+	}
+}
