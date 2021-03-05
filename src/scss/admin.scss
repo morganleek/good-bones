@@ -10,7 +10,7 @@
 @import './components/article';
 @import './components/footer';
 
-// Plugins
+// plugins
 @import './plugins/wp-everything-image';
 @import './plugins/wpcf7';
 
@@ -23,7 +23,14 @@ body {
 	}
 }
 
+// editor header styles
 .edit-post-visual-editor__post-title-wrapper {
-	border-bottom: 1px solid rgb( 118, 118, 118 );
+	border-bottom: 1px solid #c0c0c0;
+	.editor-post-title .editor-post-title__input {
+		padding: 0.5em 0;
+    font-size: 1.5em;
+    border: 1px dashed #c0c0c0;
+    padding-left: 0.5em;
+	}
 }
 

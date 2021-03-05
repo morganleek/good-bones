@@ -58,6 +58,8 @@
 
 		// enqueue editor styles
 		add_editor_style( 'dist/css/admin.css' );
+    // add inline style for :root font-size for rem values
+    wp_add_inline_style( 'wp-block-library', ':root { font-size:10px; }' );
 	}
 	
 	add_action( 'after_setup_theme', '_themename_setup', 100 );
