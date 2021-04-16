@@ -8,6 +8,14 @@
 		wp_enqueue_style( '_themename-stylesheet', get_stylesheet_directory_uri() . '/dist/css/bundle.css', array(), $theme_version, 'all' );
 		// front-end scripts
 		wp_enqueue_script( '_themename-scripts', get_stylesheet_directory_uri() . '/dist/js/bundle.js', array('jquery'), $theme_version, true );
+		// front-end js variables
+		wp_localize_script('_themename-scripts', 'site',
+			array(
+				'url' => get_bloginfo('url'),
+				'ajax' => admin_url( 'admin-ajax.php' ),
+				'template_uri' => get_stylesheet_directory_uri(),
+			)
+		);
 	}
 
 	add_action('wp_enqueue_scripts','_themename_assets');
