@@ -1,3 +1,5 @@
+@use "colors";
+
 // font aliasing
 * {
   -webkit-font-smoothing: antialiased;
@@ -39,7 +41,7 @@
 }
 
 // Paragraph
-%paragraph {
+@mixin paragraph {
   // @extend %custom-font-family-normal;
 	@extend %gutenberg-inline-font-sizes;
 	font-size: 1.5rem;
@@ -49,12 +51,14 @@
   // letter-spacing: 0.1em;
 }
 // Blockquote
-%blockquote {
+@mixin blockquote {
   p {
-    @extend %paragraph;
+    // @extend %paragraph;
+    @include paragraph;
   }
   cite, .wp-block-pullquote__citation {
-    @extend %paragraph;
+    // @extend %paragraph;
+    @include paragraph;
   }  
 }
 
@@ -68,7 +72,7 @@
     // @extend %custom-font-family-normal;
     margin: 0.65em 0;
     line-height: 1.3em;
-    color: $heading;
+    color: colors.$heading;
   }
   h1 {
     font-size: 2.8rem;
@@ -89,7 +93,8 @@
     font-size: 1.2rem;
   }
   p, ol, ul, dl, dt, summary {
-    @extend %paragraph;
+    @include paragraph;
+    // @extend %paragraph;
     // & + h1,
     // & + h2 {
     //   margin-top: 0.9em;
@@ -114,14 +119,14 @@
     height: auto;
   }
   blockquote {
-    @extend %blockquote;
+    @include blockquote;
   }
   a {
-    color: $link;
+    color: colors.$link;
     text-decoration: none;
     transition: color 0.3s;
     &:hover {
-			color: $link-hover;
+			color: colors.$link-hover;
 		}
   }
   // hr {}

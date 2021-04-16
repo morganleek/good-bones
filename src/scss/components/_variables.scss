@@ -3,10 +3,20 @@
   --var-main-margin-top: 202px;
   --var-main-margin-bottom: 205px;
 
-  --content-width-max: 122rem;
+  --content-narrow-max: 94.5rem;
+  --content-narrow-width-width-max: 119.1rem;
+  
+  --content-width-max: 143.4rem;
   --content-wide-width-max: 170rem;
 
+  // --content-desktop-margin: 12.65625vw; // unquote("clamp(2.4rem, -10.9333rem + 17.3611vw, 22.4rem)"); //  // 24px @ 768, 224px @ 1920
   --content-desktop-margin: 5rem;
-  --content-tablet-margin: 3rem;
-  --content-mobile-margin: 2rem;
+  --content-tablet-margin: 2.4rem;
+  --content-mobile-margin: 2.4rem;
+
+
+  --content-mobile-block-margin: 56px;
+  --content-desktop-block-margin: 3.5vw;
 }
+
+

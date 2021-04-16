@@ -1,19 +1,19 @@
-@import './components/variables';
-@import './components/reset';
-@import './components/colors';
-@import './components/type';
-@import './components/mixins';
-@import './components/accessibility';
-@import './components/blocks';
-@import './components/layout';
-@import './components/body';
-@import './components/header';
-@import './components/article';
-@import './components/footer';
+@use 'components/variables';
+@use 'components/reset';
+@use 'components/colors';
+@use 'components/type';
+@use 'components/mixins';
+@use 'components/accessibility';
+
+@forward 'components/body';
+@forward 'components/header';
+@forward 'components/content';
+@forward 'components/footer';
+
 
 // Plugins
-@import './plugins/wp-everything-image';
-@import './plugins/wpcf7';
+@use 'plugins/wp-everything-image';
+@use 'plugins/wpcf7';
 
 // npm
 // $hamburger-padding-x: 0;
@@ -29,9 +29,9 @@
 }
 
 body {
+  // Core Elements
   @extend %type;
   @extend %form;
-  @extend %wp-blocks;
 
   // Plugins
   @extend %wpcf7;

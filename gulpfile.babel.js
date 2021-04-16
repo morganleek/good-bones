@@ -1,6 +1,6 @@
 import { src, dest, watch, series, parallel } from 'gulp';
 import yargs from 'yargs';
-import sass from 'gulp-sass';
+import sass from 'gulp-dart-sass';
 import gulpif from 'gulp-if';
 import postcss from 'gulp-postcss';
 import sourcemaps from 'gulp-sourcemaps';

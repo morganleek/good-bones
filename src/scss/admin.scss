@@ -1,22 +1,22 @@
-@import './components/variables';
-@import './components/reset';
-@import './components/colors';
-@import './components/type';
-@import './components/accessibility';
-@import './components/blocks';
-@import './components/layout';
-@import './components/body';
-@import './components/header';
-@import './components/article';
-@import './components/footer';
+@use 'components/variables';
+@use 'components/reset';
+@use 'components/colors';
+@use 'components/type';
+@use 'components/accessibility';
+@use 'components/blocks';
+@use 'components/layout';
+
+@forward 'components/body';
+@forward 'components/header';
+@forward 'components/content';
+@forward 'components/footer';
 
 // plugins
-@import './plugins/wp-everything-image';
-@import './plugins/wpcf7';
+@use 'plugins/wp-everything-image';
+@use 'plugins/wpcf7';
 
 body {
   @extend %type;
-  @extend %wp-blocks;
 
 	:root {
 		font-size: 10px;
