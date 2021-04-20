@@ -9,3 +9,9 @@ node_modules/
 
 # Bundled
 bundled/
+
+# Config
+config.json
+
+# Vendors
+vendor/
