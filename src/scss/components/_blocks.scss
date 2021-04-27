@@ -1,13 +1,3 @@
-@mixin widths {
-	max-width: var(--content-width-max);
-	width: calc(100% - (var(--content-mobile-margin) * 2));
-	@media (min-width: 768px) { 
-		width: calc(100% - (var(--content-tablet-margin) * 2));
-	}
-	@media (min-width: 992px) { 
-		width: calc(100% - (var(--content-desktop-margin) * 2));
-	}
-}
 
 // core gutenberg items
 @mixin core {
@@ -36,14 +26,36 @@
   @include top-level-wp-block-cover;
 }
 
+@mixin small-margin {
+  margin-top: var( --content-mobile-small-block-margin );
+  // margin-bottom: var( --content-mobile-small-block-margin );
+  @media (min-width: 768px) { 
+    margin-top: var( --content-desktop-small-block-margin );
+    // margin-bottom: var( --content-desktop-small-block-margin );
+  }
+}
+
+@mixin large-margin {
+  margin-top: var( --content-mobile-block-margin );
+  // margin-bottom: var( --content-mobile-block-margin );
+  @media (min-width: 768px) { 
+    margin-top: var( --content-desktop-block-margin );
+    // margin-bottom: var( --content-desktop-block-margin );
+  }
+}
+
 // top level margins
 @mixin top-level-wp-block {
   &[class^="wp-block"] {
-    margin-top: var( --content-mobile-block-margin );
-    margin-bottom: var( --content-mobile-block-margin );
-    @media (min-width: 768px) { 
-      margin-top: var( --content-desktop-block-margin );
-      margin-bottom: var( --content-desktop-block-margin );
+    @include small-margin;
+    &:not(.wp-block-buttons):not(.wp-block-image) {
+      @include large-margin;
+      & + *:not(.alignfull.has-background) {
+        @include large-margin;
+      }
+      & + .alignfull.has-background {
+        margin-top: 0;
+      }
     }
   }
   &.alignfull,
@@ -80,8 +92,6 @@
   .wp-block-image {
     img {
       max-width: 100%;
-    }
-    &.full-size {
       display: block;
     }
   }
@@ -96,7 +106,11 @@
 }
 
 @mixin wp-block-buttons {
-  .wp-block-buttons {}
+  .wp-block-buttons {
+    .wp-block-button {
+      margin: 0;
+    }
+  }
 }
 
 @mixin wp-block-quote {
@@ -115,7 +129,20 @@
 }
 
 @mixin wp-block-group {
-  .wp-block-group {}
+  .wp-block-group {
+    &.has-background {
+      padding-left: var(--content-mobile-margin);
+      padding-right: var(--content-mobile-margin);
+      @media (min-width: 768px) { 
+        padding-left: var(--content-tablet-margin);
+        padding-right: var(--content-tablet-margin);
+      }
+      @media (min-width: 992px) { 
+        padding-left: var(--content-desktop-margin);
+        padding-right: var(--content-desktop-margin);
+      }
+    }
+  }
 }
 
 @mixin wp-block-navigation {

@@ -3,19 +3,18 @@
 @use "colors";
 @use "mixins";
 
-
 #content {
 	article {
 		.entry-content {
 			@include mixins.alignments;
 			@include blocks.core;
 			& > * {
-				@include blocks.widths;
+				@include mixins.width( var(--content-width-max) );
 				@include blocks.top;
 				margin-left: auto;
 				margin-right: auto;
 				&:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
-					@include blocks.widths;
+					@include mixins.width( var(--content-width-max) );
 				}
 			}
 		}		

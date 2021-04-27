@@ -108,7 +108,7 @@
       'core/media-text',
       'core/spacer',
       'core/cover',
-      'core/shortcode',
+      'core/shortcode'
       // 'formidable/simple-form',
       // 'acf/navigation',
       // 'good-bones/block-testimonial',
