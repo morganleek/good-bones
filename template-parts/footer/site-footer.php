@@ -4,7 +4,7 @@
 		<nav>
 			<?php 
 				_themename_nav( array( 
-					'theme_location' => 'footer'
+					'theme_location' => 'header'
 				) );
 			?>
 		</nav>

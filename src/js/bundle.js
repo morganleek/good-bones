@@ -1,6 +1,6 @@
-// import $ from 'jquery';
+import $ from 'jquery';
 
-// $(function() {
+$(function() {
 	// // Favicons
 	// const favicons = '<link rel="apple-touch-icon" sizes="180x180" href="%path%/apple-touch-icon.png">' +
 	// '<link rel="icon" type="image/png" sizes="192x192"  href="%path%/android-chrome-192x192.png">' +
@@ -22,4 +22,12 @@
 	// 		favicons.replace(/%path%/g, site.template_directory + '/dist/images/favicon/favicon-light')
 	// 	);
 	// }
-// });
+
+	// Hamburger
+	let hamburgerState = false;
+	$( '.hamburger' ).on( 'click', function() { 
+		$( this ).toggleClass( 'is-active', hamburgerState );
+		$( 'body' ).toggleClass( 'nav-is-active', hamburgerState );
+		hamburgerState = !hamburgerState;
+	} );
+});

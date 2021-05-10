@@ -1,5 +1,37 @@
 @use "colors";
 
 footer {
-	background: colors.$white;
+	// background: colors.$white;
+	padding: 10px var(--content-mobile-margin) 10px;
+	@media (min-width: 768px) { 
+		padding: 10px var(--content-tablet-margin) 10px;
+	}
+	@media (min-width: 992px) { 
+		padding: 10px var(--content-desktop-margin) 10px;
+	}
+	
+	// Navigation
+	nav {
+		ul {
+			list-style: none;
+			padding-left: 0;
+		}
+		& > ul {
+			display: flex;
+			li {
+				padding-right: 10px;
+			}
+		}
+	}
+}
+
+#post-footer {
+	// background: colors.$white;
+	padding: 10px var(--content-mobile-margin) 10px;
+	@media (min-width: 768px) { 
+		padding: 10px var(--content-tablet-margin) 10px;
+	}
+	@media (min-width: 992px) { 
+		padding: 10px var(--content-desktop-margin) 10px;
+	}
 }
