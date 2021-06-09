@@ -1,4 +1,4 @@
-@use "colors";
+// @use "colors";
 
 // font aliasing
 * {
@@ -72,7 +72,7 @@
     // @extend %custom-font-family-normal;
     margin: 0.65em 0;
     line-height: 1.3em;
-    color: colors.$heading;
+    color: var(--gb-heading);
   }
   h1 {
     font-size: 2.8rem;
@@ -122,11 +122,11 @@
     @include blockquote;
   }
   a {
-    color: colors.$link;
+    color: var(--gb-link);
     text-decoration: none;
     transition: color 0.3s;
     &:hover {
-			color: colors.$link-hover;
+			color: var(--gb-link-hover);
 		}
   }
   // hr {}

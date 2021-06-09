@@ -1,26 +1,17 @@
-// Core Colours
-$white: #fff;
-$grey: #282828;
-$blue: #007cba;
+@use "mixins";
 
-// Variable Colours
-$background: $white;
-$link: $blue;
-$link-hover: rgba($grey, 0.75);
-$heading: $blue;
+// Core Colours
+:root {
+	--gb-white: #fff;
+	--gb-dark: #1C1E23;
+	--gb-grey: #808285;
+
+	--gb-heading: #1c1E23;
+	--gb-link: #0000ff;
+	--gb-link-hover: #0077ff;
+}
 
 // Gutenberg Colours
-// Text
-.has-inline-color,
-.has-text-color {
-	&.has-white-color {
-		color: $white;
-	}
-}
-
-// Backgrounds
-.has-background {
-	&.has-white-background-color {
-		background-color: $white;
-	}
-}
+@include mixins.color("white", #ffffff);
+@include mixins.color("dark", #1C1E23, #ED6B06);
+@include mixins.color("grey", #808285);

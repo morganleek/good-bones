@@ -32,40 +32,26 @@
     add_theme_support( 'disable-custom-colors' );
 
 		// custom colour palette
-		// add_theme_support( 'editor-color-palette',
-		// 	array(
-    //     array(
-		// 		  'name'  => __( 'Maroon', 'twentynineteen' ),
-		// 		  'slug'  => 'maroon',
-		// 		  'color' => '#B9050C',
-    //     ),
-    //     array(
-		// 		  'name'  => __( 'Dark blue', 'twentynineteen' ),
-		// 		  'slug'  => 'dark-blue',
-		// 		  'color' => '#192E46',
-		// 		),
-    //     array(
-		// 		  'name'  => __( 'Grey', 'twentynineteen' ),
-		// 		  'slug'  => 'grey',
-		// 		  'color' => '#4F4F4F',
-    //     ),
-    //     array(
-		// 		  'name'  => __( 'Light', 'twentynineteen' ),
-		// 		  'slug'  => 'light',
-		// 		  'color' => '#F9F9F9',
-		// 		),
-		// 		array(
-		// 		  'name'  => __( 'Black', 'twentynineteen' ),
-		// 		  'slug'  => 'black',
-		// 		  'color' => '#000000',
-    //     ),
-    //     array(
-		// 		  'name'  => __( 'White', 'twentynineteen' ),
-		// 		  'slug'  => 'white',
-		// 		  'color' => '#ffffff',
-    //     )
-		// 	)
-		// );
+    // ensure you update these in /scss/components/_colors.scss
+  	add_theme_support( 'editor-color-palette',
+			array(
+        array(
+				  'name'  => __( 'White', 'twentynineteen' ),
+				  'slug'  => 'white',
+				  'color' => '#FFFFFF',
+        ),
+        array(
+				  'name'  => __( 'Dark', 'twentynineteen' ),
+				  'slug'  => 'dark',
+				  'color' => '#1C1E23',
+				),
+        array(
+				  'name'  => __( 'Grey', 'twentynineteen' ),
+				  'slug'  => 'grey',
+				  'color' => '#808285',
+        )
+			)
+		);
 
     // disable gradients 
     add_theme_support( 'disable-custom-gradients' );

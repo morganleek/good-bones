@@ -97,3 +97,24 @@
 		}
 	}
 }
+
+@mixin color( $label, $color, $link: #414024 ) {
+	.has-inline-color,
+	.has-text-color {
+		&.is-#{$label},
+		&.has-#{$label}-color {
+			color: $color;
+			h1, h2, h3, h4, h5, p, ol, ul, dl, dt, summary {
+				color: $color;
+			}
+		}
+	}
+	.has-background {
+		&.has-#{$label}-background-color {
+			background-color: $color;
+			a {
+				color: $link;
+			}
+		}
+	}	
+}
