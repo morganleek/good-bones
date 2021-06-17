@@ -26,21 +26,19 @@
   @include top-level-wp-block-cover;
 }
 
-@mixin small-margin {
-  margin-top: var( --content-mobile-small-block-margin );
+@mixin small-margin( $position: "top" ) {
+  margin-#{$position}: var( --content-mobile-small-block-margin );
   // margin-bottom: var( --content-mobile-small-block-margin );
   @media (min-width: 768px) { 
-    margin-top: var( --content-desktop-small-block-margin );
+    margin-#{$position}: var( --content-desktop-small-block-margin );
     // margin-bottom: var( --content-desktop-small-block-margin );
   }
 }
 
-@mixin large-margin {
-  margin-top: var( --content-mobile-block-margin );
-  // margin-bottom: var( --content-mobile-block-margin );
+@mixin large-margin( $position: "top", $mobile-size: var( --content-mobile-block-margin ), $desktop-size: var( --content-desktop-block-margin ) ) {
+  margin-#{$position}: $mobile-size;
   @media (min-width: 768px) { 
-    margin-top: var( --content-desktop-block-margin );
-    // margin-bottom: var( --content-desktop-block-margin );
+    margin-#{$position}: $desktop-size;
   }
 }
 
