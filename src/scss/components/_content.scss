@@ -9,11 +9,10 @@
 			@include mixins.alignments;
 			@include blocks.core;
 			& > * {
-				@include mixins.width( var(--content-width-max) );
+				// Include top level block styles
 				@include blocks.top;
-				margin-left: auto;
-				margin-right: auto;
 				&:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+					// Items without a styled width set max width
 					@include mixins.width( var(--content-width-max) );
 				}
 			}

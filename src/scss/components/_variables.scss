@@ -3,11 +3,11 @@
   --var-main-margin-top: 202px;
   --var-main-margin-bottom: 205px;
 
-  --content-narrow-max: 94.5rem;
-  --content-narrow-width-width-max: 119.1rem;
+  --content-narrow-max: 90rem;
+  --content-narrow-width-width-max: 120rem;
   
-  --content-width-max: 143.4rem;
-  --content-wide-width-max: 170rem;
+  --content-width-max: 120rem;
+  --content-wide-width-max: 144rem;
 
   // --content-desktop-margin: 12.65625vw; // unquote("clamp(2.4rem, -10.9333rem + 17.3611vw, 22.4rem)"); //  // 24px @ 768, 224px @ 1920
   --content-desktop-margin: 5rem;
@@ -22,6 +22,11 @@
 
   // Mobile nav break point
   --mobile-nav-breakpoint: 768px;
+
+  --content-margin: 2.4rem;
+  @media (min-width: 992px) { 
+    --content-margin: 5rem;
+  }
 }
 
 
