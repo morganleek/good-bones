@@ -24,93 +24,100 @@
 //   font-size: unquote("clamp(2.2rem, 1.2667rem + 2.5926vw, 5rem)");
 // }
 
+@mixin type {
+  font-family: sans-serif;
+  font-size: var(--content-font-size); 
+  line-height: 1.3em;
+}
+
 // Gutenberg Inline Sizes
-%gutenberg-inline-font-sizes {
+@mixin gutenberg-inline-font-sizes {
   .has-small-font-size,
   &.has-small-font-size {
-    font-size: 0.9em;
+    font-size: calc(0.8 * var(--content-font-size)); 
   }
   .has-large-font-size,
   &.has-large-font-size {
-    font-size: 1.153846em;
+    font-size: calc(1.2 * var(--content-font-size)); 
   }
-  .has-larger-font-size,
-  &.has-larger-font-size {
-    font-size: 1.25em;
+}
+
+// Headings
+@mixin heading {
+  h1, h2, h3, h4, h5, h6 {
+    // @include custom-font-family-normal;
+    margin: 0.65em 0;
+    line-height: 1.3em;
+    color: var(--gb-heading);
+  }
+  @include h1;
+  @include h2;
+  @include h3;
+  @include h4;
+  @include h5;
+  @include h6;
+}
+@mixin h1 {
+  h1 {
+    font-size: var(--content-h1-size);
+  }
+}
+@mixin h2 {
+  h2 {
+    font-size: var(--content-h2-size);
+  }
+}
+@mixin h3 {
+  h3 {
+    font-size: var(--content-h3-size);
+  }
+}
+@mixin h4 {
+  h4 {
+    font-size: var(--content-h4-size);
+  }
+}
+@mixin h5 {
+  h5 {
+    font-size: var(--content-h5-size);
+  }
+}
+@mixin h6 {
+  h6 {
+    font-size: var(--content-h6-size);
   }
 }
 
 // Paragraph
 @mixin paragraph {
-  // @extend %custom-font-family-normal;
-	@extend %gutenberg-inline-font-sizes;
-	font-size: 1.5rem;
-  line-height: 1.3em;
+  @include type;
+	@include gutenberg-inline-font-sizes;
   font-weight: normal;
   margin: 1.3em 0;
-  // letter-spacing: 0.1em;
 }
+
 // Blockquote
 @mixin blockquote {
   p {
-    // @extend %paragraph;
     @include paragraph;
   }
   cite, .wp-block-pullquote__citation {
-    // @extend %paragraph;
     @include paragraph;
   }  
 }
 
-// Type for Admin and Front
-%type {
-  // @extend %custom-font-family-normal;
-  font-family: sans-serif;
-  font-size: 1.5rem; 
-  line-height: 1.3em;
-  h1, h2, h3, h4, h5, h6 {
-    // @extend %custom-font-family-normal;
-    margin: 0.65em 0;
-    line-height: 1.3em;
-    color: var(--gb-heading);
-  }
-  h1 {
-    font-size: 2.8rem;
-  }
-  h2 {
-    font-size: 2.4rem;
-  }
-  h3 {
-    font-size: 1.8rem;
-  }
-  h4 {
-    font-size: 1.3rem;
-  }
-  h5 {
-    font-size: 1.3rem;
-  }
-  h6 {
-    font-size: 1.2rem;
-  }
+// Base fonts
+@mixin base {
+  @include type;
+  @include heading;
   p, ol, ul, dl, dt, summary {
     @include paragraph;
-    // @extend %paragraph;
-    // & + h1,
-    // & + h2 {
-    //   margin-top: 0.9em;
-    // }
-    // a {
-    //   text-decoration: underline;
-    // }
   }
   ol, ul, dl {
-    // margin: 1em 0;
     li {
       margin-bottom: 0.5em;
     }
   }
-  // p, ol, ul, dl, dt, summary, span {}
-  // span {}
   iframe {
     max-width: 100%;
   }
@@ -132,8 +139,8 @@
   // hr {}
 }
 
-// Not for Admin
-%form {
+// Form fields
+@mixin form {
   textarea,
   input[type="button"],
   input[type="checkbox"],
@@ -142,7 +149,6 @@
   input[type="datetime-local"],
   input[type="email"],
   input[type="file"],
-  input[type="hidden"],
   input[type="image"],
   input[type="month"],
   input[type="number"],
@@ -156,8 +162,7 @@
   input[type="time"],
   input[type="url"],
   input[type="week"],
-  input[type="submit"],
-  button {
+  input[type="hidden"] {
     border-radius: 0;
     // border: 1px solid;
     // background: transparent;

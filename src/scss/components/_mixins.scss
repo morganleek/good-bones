@@ -44,6 +44,7 @@
 	}
 
 	/* Wide */
+	[data-align="wide"],
 	.alignwide {
 		@include width( var(--content-wide-width-max) );
 	}
@@ -101,6 +102,13 @@
 	// 		max-width: none;
 	// 	}
 	// }
+
+	[data-align="wide"],
+	[data-align="full"] {
+		& > *:first-child {
+			margin-top: 0;
+		}
+	}
 }
 
 @mixin color( $label, $color, $link: #414024 ) {

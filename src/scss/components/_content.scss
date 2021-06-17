@@ -3,20 +3,31 @@
 @use "colors";
 @use "mixins";
 
+@mixin content-items {
+	@include mixins.alignments;
+	@include blocks.core;
+	& > * {
+		// Include top level block styles
+		@include blocks.top;
+		&:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide):not([data-align="wide"]):not([data-align="full"]) {
+			// Items without a styled width set max width
+			@include mixins.width( var(--content-width-max) );
+		}
+	}
+}
+
+
 #content {
 	article {
 		.entry-content {
-			@include mixins.alignments;
-			@include blocks.core;
-			& > * {
-				// Include top level block styles
-				@include blocks.top;
-				&:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
-					// Items without a styled width set max width
-					@include mixins.width( var(--content-width-max) );
-				}
-			}
+			@include content-items;
 		}		
 	}
 }
 
+.block-editor-block-list__layout.is-root-container {
+	// Top editor block
+	@include content-items;
+	padding-left: 10px;
+	padding-right: 10px;
+}

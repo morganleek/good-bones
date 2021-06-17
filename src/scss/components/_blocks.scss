@@ -61,25 +61,23 @@
     //   }
     // }
   }
-  &:not(.alignfull) {
+  &[data-align=full] {
+    opacity: 0.5;
+  }
+  &:not(.alignfull):not([data-align=full]) {
     & + * {
       @include small-margin;
     }
   }
-  &.alignfull {
-    & + *:not(.alignfull) {
+  &.alignfull,
+  &[data-align=full] {
+    & + *:not(.alignfull):not([data-align=full]) {
       @include small-margin;
     }
   }
-  &.alignfull,
-  &.alignwide {
-    // margin-top: 0;
-    // margin-bottom: 0;
-    // @media (min-width: 768px) { 
-    //   margin-top: 0;
-    //   margin-bottom: 0;
-    // }
-  }
+  // &.alignfull,
+  // &.alignwide {
+  // }
 }
 
 // top level not wp-block-* margins

@@ -22,8 +22,8 @@
 
 body {
   // Core Elements
-  @extend %type;
-  @extend %form;
+  @include type.base;
+  @include type.form;
 
   // Plugins
   @extend %wpcf7;
