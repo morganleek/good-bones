@@ -1,17 +1,23 @@
 :root {
   font-size: 10px;
+  
+  // Margins
   --var-main-margin-top: 202px;
   --var-main-margin-bottom: 205px;
 
+  // Max width default
   --content-narrow-max: 90rem;
   --content-narrow-width-width-max: 120rem;
   
+  // Max width wide
   --content-width-max: 120rem;
   --content-wide-width-max: 144rem;
 
+  // Top and bottom default margins
   --content-mobile-block-margin: 1em;
   --content-desktop-block-margin: 2.4em;
 
+  // Top and bottom default margins small elements
   --content-mobile-small-block-margin: 1em;
   --content-desktop-small-block-margin: 1.2em;
 
@@ -33,9 +39,10 @@
     --content-h6-size: 1.2rem;
   }
 
-
-  // Mobile nav break point
-  --mobile-nav-breakpoint: 768px;
+  // Device break points
+  --break-tablet: 768px;
+  --break-desktop: 992px;
+  --break-desktop-large: 1200px;
 
   // Margins
   --content-margin: 2.4rem;

@@ -1,6 +1,6 @@
 $mobile-break: 768px;
 
-header {
+header#header {
 	padding: 10px var(--content-margin) 20px;
 	@media (min-width: 768px) { 
 		padding-top: 30px;

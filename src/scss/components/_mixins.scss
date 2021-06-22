@@ -11,13 +11,7 @@
 
 @mixin width( $max-width ) {
 	max-width: $max-width;
-	width: calc(100% - (var(--content-mobile-margin) * 2));
-	@media (min-width: 768px) { 
-		width: calc(100% - (var(--content-tablet-margin) * 2));
-	}
-	@media (min-width: 992px) { 
-		width: calc(100% - (var(--content-desktop-margin) * 2));
-	}
+	width: calc(100% - (var(--content-margin) * 2));
 }
 
 @mixin alignments {
@@ -107,6 +101,9 @@
 }
 
 @mixin color( $label, $color, $link: #414024 ) {
+	:root {
+		--gb-#{$label}: $color;
+	}
 	.has-inline-color,
 	.has-text-color {
 		&.is-#{$label},

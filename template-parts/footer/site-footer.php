@@ -8,11 +8,8 @@
 				) );
 			?>
 		</nav>
+		<div id="copyright">
+			<p>&copy; <?php print date( 'Y' ); ?></p>
+		</div>
 	</div>
 </footer><!-- #colophon -->
-
-<div id="post-footer">
-	<div class="inner">
-		<div class="copyright"><p>&copy; <?php print date( 'Y' ); ?></p></div>
-	</div>
-</div>

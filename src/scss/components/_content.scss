@@ -3,7 +3,7 @@
 @use "colors";
 @use "mixins";
 
-@mixin content-items {
+@mixin layout {
 	@include mixins.alignments;
 	@include blocks.core;
 	& > * {
@@ -16,18 +16,14 @@
 	}
 }
 
-
-#content {
-	article {
-		.entry-content {
-			@include content-items;
-		}		
-	}
+// Front end
+#content article .entry-content {
+	@include layout;
 }
 
+// Back end
 .block-editor-block-list__layout.is-root-container {
-	// Top editor block
-	@include content-items;
+	@include layout;
 	padding-left: 10px;
 	padding-right: 10px;
 }

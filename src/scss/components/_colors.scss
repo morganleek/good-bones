@@ -1,17 +1,13 @@
 @use "mixins";
 
-// Core Colours
+// Colour variables
 :root {
-	--gb-white: #fff;
-	--gb-dark: #1C1E23;
-	--gb-grey: #808285;
-
 	--gb-heading: #1c1E23;
 	--gb-link: #0000ff;
 	--gb-link-hover: #0077ff;
 }
 
-// Gutenberg Colours
+// Gutenberg colours
 @include mixins.color("white", #ffffff);
 @include mixins.color("dark", #1C1E23, #ED6B06);
 @include mixins.color("grey", #808285);
