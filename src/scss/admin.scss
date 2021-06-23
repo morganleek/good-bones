@@ -1,17 +1,18 @@
+// Core components
 @use 'components/reset';
 @use 'components/variables';
 @use 'components/colors';
 @use 'components/type';
 @use 'components/accessibility';
 @use 'components/blocks';
-@use 'components/layout';
 
+// Layout
 @forward 'components/body';
 @forward 'components/header';
 @forward 'components/content';
 @forward 'components/footer';
 
-// plugins
+// Plugins
 @use 'plugins/wp-everything-image';
 @use 'plugins/wpcf7';
 

@@ -1,4 +1,4 @@
-// 
+// Core components
 @use 'components/reset';
 @use 'components/variables';
 @use 'components/colors';
@@ -6,6 +6,7 @@
 @use 'components/mixins';
 @use 'components/accessibility';
 
+// Layout
 @forward 'components/body';
 @forward 'components/header';
 @forward 'components/content';
