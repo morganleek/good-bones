@@ -54,7 +54,11 @@
 		);
 
     // disable gradients 
+    add_theme_support( 'editor-gradient-presets', array() );
     add_theme_support( 'disable-custom-gradients' );
+
+    // border
+    add_theme_support( 'disable-border-settings' );
 
     // remove patterns 
     remove_theme_support( 'core-block-patterns' );
