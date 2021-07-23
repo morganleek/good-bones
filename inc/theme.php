@@ -8,54 +8,8 @@
     // wide alignment
     add_theme_support( 'align-wide' );
 
-    // disable custom font sizes
-    add_theme_support( 'disable-custom-font-sizes' );
-
-		// enable custom font sizes
-    add_theme_support( 'editor-font-sizes', array(
-      array(
-        'name' => esc_attr__( 'Small', 'themeLangDomain' ),
-        'size' => 16,
-        'slug' => 'small'
-      ),
-      array(
-        'name' => esc_attr__( 'Large', 'themeLangDomain' ),
-        'size' => 20,
-        'slug' => 'large'
-      )
-    ) );
-
     // post thumbnails
     add_theme_support( 'post-thumbnails', array( 'post' ) );
-
-		// disable custom colours 
-    add_theme_support( 'disable-custom-colors' );
-
-		// custom colour palette
-    // ensure you update these in /scss/components/_colors.scss
-  	add_theme_support( 'editor-color-palette',
-			array(
-        array(
-				  'name'  => __( 'White', 'twentynineteen' ),
-				  'slug'  => 'white',
-				  'color' => '#FFFFFF',
-        ),
-        array(
-				  'name'  => __( 'Dark', 'twentynineteen' ),
-				  'slug'  => 'dark',
-				  'color' => '#1C1E23',
-				),
-        array(
-				  'name'  => __( 'Grey', 'twentynineteen' ),
-				  'slug'  => 'grey',
-				  'color' => '#808285',
-        )
-			)
-		);
-
-    // disable gradients 
-    add_theme_support( 'editor-gradient-presets', array() );
-    add_theme_support( 'disable-custom-gradients' );
 
     // border
     add_theme_support( 'disable-border-settings' );
@@ -64,7 +18,7 @@
     remove_theme_support( 'core-block-patterns' );
 
     // custom spacing 
-    add_theme_support( 'custom-spacing' );
+    // add_theme_support( 'custom-spacing' );
 
     // editor styles
     add_theme_support( 'editor-styles' );

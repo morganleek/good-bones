@@ -120,6 +120,9 @@
   .wp-block-buttons {
     .wp-block-button {
       margin: 0;
+      .wp-block-button__link {
+        border-radius: 0;
+      }
     }
   }
 }

@@ -1,0 +1,67 @@
+{
+	"version": 1,
+	"settings": {
+		"color": {
+			"custom": false,
+			"customDuotone": false,
+			"customGradient": false,
+			"duotone": [],
+			"gradients": [],
+			"link": false,
+			"palette": [
+				{
+					"name": "Black",
+					"slug": "black",
+					"color": "#000000"
+				},
+				{
+					"name": "Dark",
+					"slug": "dark",
+					"color": "#efefef"
+				},
+				{
+					"name": "White",
+					"slug": "white",
+					"color": "#ffffff"
+				}
+			]
+		},
+		"typography": {
+			"customFontSize": false,
+			"customLineHeight": false,
+			"dropCap": false,
+			"fontSizes": [
+				{
+					"name": "Smaller", 
+					"size":  16,
+					"slug":  "small"
+				},
+				{
+					"name": "Larger", 
+					"size":  20,
+					"slug":  "large"
+				}
+			]
+		},
+		"custom": {},
+		"layout": {
+				"contentSize": "800px",
+				"wideSize": "1000px"
+		},
+		"spacing": {
+				"customMargin": false,
+				"customPadding": false,
+				"units": [ "px", "em", "rem", "vh", "vw" ]
+		},
+		"blocks": {
+			"core/button": {
+				"border": {
+					"customRadius": false
+				}
+			}
+		}
+	},
+	"styles": {},
+	"customTemplates": {},
+	"templateParts": {}
+}
