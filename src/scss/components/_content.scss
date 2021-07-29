@@ -22,8 +22,17 @@
 }
 
 // Back end
-.block-editor-block-list__layout.is-root-container {
-	@include layout;
-	padding-left: 10px;
-	padding-right: 10px;
+body {
+	& > .edit-post-visual-editor__post-title-wrapper,
+	& > .block-editor-block-list__layout.is-root-container {
+		@include layout;
+	}
+	// Title
+	& > .edit-post-visual-editor__post-title-wrapper {
+		.editor-post-title .editor-post-title__input {
+			border: 0 none !important;
+			padding-left: 0 !important;
+			padding-right: 0 !important;
+		}
+	}
 }

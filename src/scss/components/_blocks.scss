@@ -46,53 +46,26 @@
 
 // top level margins
 @mixin top-level-wp-block {
-  &[class^="wp-block"] {
-    // Reset
+  &[class^="wp-block"] { // Reset
     margin-top: 0;
     margin-bottom: 0;
-    // @include small-margin;
-    // &:not(.wp-block-buttons):not(.wp-block-image) {
-    //   @include large-margin;
-    //   & + *:not(.alignfull.has-background) {
-    //     @include large-margin;
-    //   }
-    //   & + .alignfull.has-background {
-    //     margin-top: 0;
-    //   }
-    // }
   }
-  &[data-align=full] {
-    opacity: 0.5;
-  }
-  &:not(.alignfull):not([data-align=full]) {
+  &:not(.alignfull):not([data-align=full]):not(style) { // full + * - Margin top
     & + * {
       @include small-margin;
     }
   }
   &.alignfull,
-  &[data-align=full] {
-    & + *:not(.alignfull):not([data-align=full]) {
+  &[data-align=full],
+  &:is(style) {
+    & + *:not(.alignfull):not([data-align=full]) { // full + not full - Margin top
       @include small-margin;
     }
   }
-  // &.alignfull,
-  // &.alignwide {
-  // }
 }
 
 // top level not wp-block-* margins
-@mixin top-level-wp-block-not {
-  // &:not([class^="wp-block"]) {
-  //   & + [class^="wp-block"] { // :not(.wp-block-image)
-  //     margin-top: var( --content-mobile-block-margin );
-  //     @media (min-width: 768px) { 
-  //       margin-top: var( --content-desktop-block-margin );
-  //     }
-  //   }
-  // }
-  // specific tag
-  // &:is( p ) {}
-}
+@mixin top-level-wp-block-not {}
 
 
 @mixin wp-block-cover {

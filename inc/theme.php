@@ -61,43 +61,43 @@
     );
   }
 
-	add_filter( 'allowed_block_types', '_themename_allowed_block_types' );
+	// add_filter( 'allowed_block_types', '_themename_allowed_block_types' );
 
   // Block Styles
   function _themename_register_block_styles() {
     // Add styles
 
     // Cover
-    register_block_style( 'core/cover', [
-      'name' => 'banner-reversed',
-      'label' => __( 'Reversed', '_themename' ),
-    ] );
+    // register_block_style( 'core/cover', [
+    //   'name' => 'banner-reversed',
+    //   'label' => __( 'Reversed', '_themename' ),
+    // ] );
 
     // Columns
-    register_block_style( 'core/columns', [
-      'name' => 'no-bottom-margin',
-      'label' => __( 'No bottom margin', '_themename' ),
-    ] );
-    register_block_style( 'core/columns', [
-      'name' => 'columns-border',
-      'label' => __( 'Columns border', '_themename' ),
-    ] );
+    // register_block_style( 'core/columns', [
+    //   'name' => 'no-bottom-margin',
+    //   'label' => __( 'No bottom margin', '_themename' ),
+    // ] );
+    // register_block_style( 'core/columns', [
+    //   'name' => 'columns-border',
+    //   'label' => __( 'Columns border', '_themename' ),
+    // ] );
 
     // Gallery
-    register_block_style( 'core/gallery', [
-      'name' => 'gallery-slider',
-      'label' => __( 'Gallery Slider', '_themename' ),
-    ] );
+    // register_block_style( 'core/gallery', [
+    //   'name' => 'gallery-slider',
+    //   'label' => __( 'Gallery Slider', '_themename' ),
+    // ] );
 
     // Buttons
-    register_block_style( 'core/button', [
-      'name' => 'play',
-      'label' => __( 'Play', '_themename' ),
-    ] );
+    // register_block_style( 'core/button', [
+    //   'name' => 'play',
+    //   'label' => __( 'Play', '_themename' ),
+    // ] );
 
   }
 
-  // add_action( 'init', '_themename_register_block_styles', 100 );
+  add_action( 'init', '_themename_register_block_styles', 100 );
 
 	// Init
 	// function _themename_init() {

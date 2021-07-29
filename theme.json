@@ -15,14 +15,29 @@
 					"color": "#000000"
 				},
 				{
-					"name": "Dark",
-					"slug": "dark",
-					"color": "#efefef"
+					"name": "Grey",
+					"slug": "grey",
+					"color": "#1D1D1D"
+				},
+				{
+					"name": "Light grey",
+					"slug": "light-grey",
+					"color": "#F9F9F9"
+				},
+				{
+					"name": "Yellow",
+					"slug": "yellow",
+					"color": "#F5FF75"
+				},
+				{
+					"name": "Paragraph",
+					"slug": "paragraph",
+					"color": "#717171"
 				},
 				{
 					"name": "White",
 					"slug": "white",
-					"color": "#ffffff"
+					"color": "#FFFFFF"
 				}
 			]
 		},
@@ -32,21 +47,16 @@
 			"dropCap": false,
 			"fontSizes": [
 				{
-					"name": "Smaller", 
-					"size":  16,
-					"slug":  "small"
-				},
-				{
-					"name": "Larger", 
-					"size":  20,
-					"slug":  "large"
+					"name": "Introduction", 
+					"size":  "clamp(2rem, 1.7087rem + 0.7767vw, 3.2rem)",
+					"slug":  "introduction"
 				}
 			]
 		},
 		"custom": {},
 		"layout": {
-				"contentSize": "800px",
-				"wideSize": "1000px"
+			"contentSize": "1456px",
+			"wideSize": "1920px"
 		},
 		"spacing": {
 				"customMargin": false,
@@ -58,10 +68,58 @@
 				"border": {
 					"customRadius": false
 				}
+			},
+			"core/image": {
+				"styles": []
 			}
 		}
 	},
-	"styles": {},
+	"styles": {
+		"typography": {
+			"fontSize": "clamp(1.4rem, 1.3515rem + 0.1294vw, 1.6rem)"
+		},
+		"elements": {
+			"h1": {
+				"typography": {
+					"fontSize": "clamp(3.4rem, 2.5262rem + 2.3301vw, 7rem)"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontSize": "clamp(2.4rem, 1.8660rem + 1.4239vw, 4.6rem)"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontSize": "clamp(2rem, 1.7087rem + 0.7767vw, 3.2rem)"
+				}
+			},
+			"h4": {
+				"typography": {
+					"fontSize": "clamp(1.8rem, 1.6544rem + 0.3883vw, 2.4rem)"
+				}
+			},
+			"h5": {
+				"typography": {
+					"fontSize": "clamp(1.6rem, 1.5515rem + 0.1294vw, 1.8rem)"
+				}
+			},
+			"h6": {
+				"typography": {
+					"fontSize": "clamp(1.4rem, 1.3515rem + 0.1294vw, 1.6rem)"
+				}
+			}
+		}
+	},
 	"customTemplates": {},
-	"templateParts": {}
+	"templateParts": [
+		{
+			"name": "header",
+			"area": "header"
+		},
+		{
+			"name": "footer",
+			"area": "footer"
+		}
+	]
 }
