@@ -30,4 +30,10 @@ $(function() {
 		$( 'body' ).toggleClass( 'nav-is-active', hamburgerState );
 		hamburgerState = !hamburgerState;
 	} );
+
+	// Lazyloading finished
+	// const img = document.querySelector( 'img' );
+	// img.addEventListener( 'EverythingImage::ImageLoaded', function( e ) { 
+	// 	console.log( e );
+	// } );
 });
